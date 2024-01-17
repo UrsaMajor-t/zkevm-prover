@@ -8,6 +8,7 @@
 
     "runAggregatorServer": false,
     "runAggregatorClient": true,
+    "runAggregatorClientMock": false,
 
     "runFileGenBatchProof": false,
     "runFileGenAggregatedProof": false,
@@ -63,7 +64,7 @@
 
     "aggregatorServerPort": 50081,
     "aggregatorClientPort": 50081,
-    "aggregatorClientHost": "127.0.0.1",
+    "aggregatorClientHost": "172.31.35.140",
     "aggregatorClientMockTimeout": 10000000,
     "aggregatorClientWatchdogTimeout": 60000000,
 
@@ -87,7 +88,7 @@
     "publicsOutput": "public.json",
     "proofFile": "proof.json",
 
-    "databaseURL": "local",
+    "databaseURL": "postgresql://prover_user:prover_pass@172.31.35.140:5432/prover_db",
     "databaseURL_disabled": "postgresql://statedb:statedb@127.0.0.1:5432/testdb",
     "dbNodesTableName": "state.nodes",
     "dbProgramTableName": "state.program",
@@ -96,7 +97,7 @@
     "dbNumberOfPoolConnections": 25,
     "dbMetrics": false,
     "dbClearCache": false,
-    "dbGetTree": false,
+    "dbGetTree": true,
     "dbReadRetryDelay": 100000,
     "cleanerPollingPeriod": 600,
     "requestsPersistence": 3600,
